@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin,*
+X-KDE-Priority=TopLevel
+MimeType=application/octet-stream;
+Actions=CopyContents;
+
+[Desktop Action CopyContents]
+Exec=xclip -selection clipboard -t $(file --mime-type -b %f) -i %f
+Icon=edit-copy
+Name=Copy File Contents
